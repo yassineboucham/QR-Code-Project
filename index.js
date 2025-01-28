@@ -4,6 +4,7 @@
 3. Create a txt file to save the user input using the native fs node module.
 */
 import inquirer from 'inquirer';
+import qr from 'qr-image';
 
 inquirer
   .prompt([
@@ -16,6 +17,7 @@ inquirer
   .then((answers) => {
     // Use user feedback for... whatever!!
     var url = answers.URL;
+
   })
   .catch((error) => {
     if (error.isTtyError) {
