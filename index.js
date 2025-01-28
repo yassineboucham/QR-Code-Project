@@ -15,6 +15,7 @@ inquirer
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
+    var url = answers.URL;
   })
   .catch((error) => {
     if (error.isTtyError) {
