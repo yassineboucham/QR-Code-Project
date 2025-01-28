@@ -20,6 +20,12 @@ inquirer
     var url = answers.URL;
     var qr_png = qr.image(url);
     qr_png.pipe(fs.createWriteStream('QR.png'));
+    fs.writeFile("url.txt", url, (err) => {
+        if (err) console.log(err);
+        else {
+            console.log("File written successfully");
+        }
+    })
   })
   .catch((error) => {
     if (error.isTtyError) {
